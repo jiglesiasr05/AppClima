@@ -144,6 +144,7 @@ sudo apt install git -y
 git clone https://github.com/jiglesiasr05/AppClima
 cd AppClima
 ```
+En el archivo debemos añadir la clave api conseguida en https://openweathermap.org/
 
 ### 5.3. Despliegue con Docker
 
