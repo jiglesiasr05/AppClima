@@ -140,7 +140,7 @@ class ClimaControlador {
     }
 
     /*
-     * Método auxiliar para extraer datos y requerir el archivo de la vista.
+     * Extraer datos y requerir el archivo de la vista.
      */
     private function renderizar($nombreVista, $variables = []) {
         extract($variables);
