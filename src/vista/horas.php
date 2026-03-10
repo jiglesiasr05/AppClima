@@ -2,7 +2,6 @@
 $vista = 'horas';
 include 'vista/header.php'; 
 
-// Preparamos los datos para Chart.js
 $labels = [];
 $data = [];
 $contador_chart = 0;
