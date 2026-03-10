@@ -116,3 +116,51 @@ En su lugar, **los gráficos se generan al 100% en el servidor mediante PHP y CS
   Se fuerza el tipado con `floatval()` en `obtenerDatosNavegacion()` para confirmar la naturaleza numérica de las coordenadas antes de reenviarlas a la API.
 
 ---
+
+## 5. Implementación a través de AWS (EC2)
+
+Para el despliegue de la aplicación en la nube, se ha utilizado los servicios de Amazon Web Services.
+
+### 5.1. Instanciación del servidor
+
+Se ha configurado una instancia en el servicio EC2 (Elastic Compute Cloud) cumpliendo con los siguientes parámetros:
+
+- **Tipo de instancia:** t3.micro, recursos de la Capa Gratuita (Free Tier) de AWS.
+
+- **Sistema Operativo:** Ubuntu Server 22.04 LTS.
+
+- **Configuración de Red:** Se han habilitado los puertos 80 (HTTP), 443 (HTTPS) y 22 (SSH) en el Grupo de Seguridad para permitir el acceso web y la administración remota.
+
+### 5.2. Clonación del repositorio y preparación
+
+Una vez establecida la conexión SSH con la instancia, se procede a la descarga del código fuente desde el repositorio oficial:
+
+```bash
+# Actualización del sistema e instalación de git
+sudo apt update -y
+sudo apt install git -y
+
+# Clonación del proyecto
+git clone https://github.com/jiglesiasr05/AppClima
+cd AppClima
+```
+
+### 5.3. Despliegue con Docker
+
+Para garantizar que la aplicación funcione de forma idéntica al entorno de desarrollo, se utiliza Docker.
+El despliegue se realiza mediante el contenedor definido en el proyecto:
+
+```bash
+# Instalación de Docker
+sudo apt install docker -y
+sudo service docker start
+
+# Construcción y despliegue del contenedor
+docker-compose up -d
+```
+
+### 5.4. Acceso y DNS
+
+El servicio se encuentra totalmente operativo en la siguiente URL:  
+URL de acceso: http://clima.jaimeiglesias.es
+
