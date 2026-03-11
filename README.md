@@ -163,5 +163,5 @@ docker-compose up -d
 ### 5.4. Acceso y DNS
 
 El servicio se encuentra totalmente operativo en la siguiente URL:  
-URL de acceso: http://clima.jaimeiglesias.es
+URL de acceso: [http://clima.jaimeiglesias.es](http://jaimeiglesias.myddns.me/)
 
